@@ -82,3 +82,16 @@ function describeArc(x, y, radius, startAngle, endAngle){
 
     return d;       
 }
+
+function getColor(percentage) {
+    var result;
+    if (percentage <= 50) {
+        var green = Math.round((percentage/50)*255);
+        result="rgb(255," + green + ",0)";
+    }
+    else if (percentage > 50 && percentage <= 100) {
+        var red = Math.round(510 -5.1*percentage);
+        result = "rgb(" + red + ",255,0)";
+    }
+    return result;
+}
